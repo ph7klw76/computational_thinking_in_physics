@@ -184,7 +184,7 @@ yields discrete approximations to the **bound-state energies** and **wavefunctio
 ### Libary
 
 You need to use
-from [scipy.linalg import eigh_tridiagonal].(https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh_tridiagonal.html)
+from [scipy.linalg import eigh_tridiagonal](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh_tridiagonal.html).
 There are several additional scenarios across quantum mechanics, classical mechanics, and PDE eigenproblems where you can exploit SciPy’s specialized tridiagonal eigensolver such as Quantum harmonic oscillator (1D),Vibrational modes of a linear mass–spring chain, Heat‐equation and etc
 
 An example of part of code is givem below:
