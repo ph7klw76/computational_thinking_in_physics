@@ -46,7 +46,7 @@ Assume the material is **n-type**, so only electrons (conduction band) matter.
 ### 4. Report
 - $L^*$ (in nm);
 - $E_1(L^*)$ and the residual error (in meV);
-- How sensitive the design is to a ±5 % uncertainty in $\Delta E_c$ (re‑optimise for $\Delta E_c = 0.285\,\text{eV}$ and $0.315\,\text{eV}$).
+- How sensitive the design is to a ±5 % uncertainty in $\Delta E_c$ (re‑optimise for $\Delta E_c = 0.285\text{eV}$ and $0.315\text{eV}$).
 
 ## Guide to Solution
 ## Mathematical Setup
