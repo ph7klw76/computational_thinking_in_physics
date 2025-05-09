@@ -28,7 +28,7 @@ Assume the material is **n-type**, so only electrons (conduction band) matter.
 ## Tasks
 
 ### 1. Write a Python program that, for a given well width $L$ (in metres or nanometres, but be consistent):
-- Solves the time‑independent Schrödinger equation for the bound states (use either the transcendental equations, a finite-difference Hamiltonian, or a shooting method);
+- Solves the time‑independent Schrödinger equation for the bound states (use  a finite-difference Hamiltonian method);
 - Returns the ground-state energy $E_1(L)$ measured from the bottom of the well.
 
 ### 2. Iterate over $L$ to find the smallest width $L^* < 10\,\text{nm}$ for which an 8 µm photon can just promote an electron into the continuum, i.e.
