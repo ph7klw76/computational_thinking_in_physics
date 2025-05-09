@@ -84,10 +84,11 @@ z_i = z_0 + i \Delta x, \quad i = 0, \dots, N - 1
 $$
 
 Second derivative using central differences:
+To learn more calculation of derivatives using central differences method click [here](https://en.wikipedia.org/wiki/Finite_difference)
 
 ![image](https://github.com/user-attachments/assets/5052930b-4598-4797-94ed-9dfb927c3a8d)
 
-To learn more dcalculation of derivatives using central differences method click [here](https://en.wikipedia.org/wiki/Finite_difference)
+
 ---
 
 ### Hamiltonian Matrix
