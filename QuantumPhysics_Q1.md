@@ -183,13 +183,17 @@ You need to use
 from scipy.linalg import eigh_tridiagonal
 There are several additional scenarios across quantum mechanics, classical mechanics, and PDE eigenproblems where you can exploit SciPy’s specialized tridiagonal eigensolver such as Quantum harmonic oscillator (1D),Vibrational modes of a linear mass–spring chain, Heat‐equation and etc
 
+An example of part of code is givem below:
+
 ```python
+
 dx = dx_nm*1e-9                    # grid spacing in meters
 prefactor = (hbar**2)/(2*m_star*dx**2)*J_to_eV  
 # here prefactor == a in eV
 V = np.where(np.abs(z_nm)<=L/2, 0.0, Delta_Ec)   # potential array V(z_i)
 main_diag = 2*prefactor + V        # length-N array [d₁, d₂, …, d_N]
 off_diag  = -prefactor * np.ones(N-1)  # length-(N-1) array [–a, –a, …]
+
 
 from scipy.linalg import eigh_tridiagonal
 
@@ -215,7 +219,7 @@ This forms a tridiagonal matrix structure:
 - `main_diag`: the values along the main diagonal ($H_{ii}$),
 - `off_diag`: the values just above and below the diagonal ($H_{i,i\pm1}$).
 
-Then, SciPy applies an **efficient tridiagonal eigensolver** — essentially a specialized version of either the **symmetric QR algorithm** or the **divide-and-conquer algorithm** — to compute the eigenvalues and eigenvectors efficiently.
+Then, SciPy applies an **efficient tridiagonal eigensolver**  essentially a specialized version of either the **symmetric QR algorithm** or the **divide-and-conquer algorithm**  to compute the eigenvalues and eigenvectors efficiently.
 
 ### Selecting Eigenvalues in SciPy
 
@@ -229,3 +233,4 @@ Then, SciPy applies an **efficient tridiagonal eigensolver** — essentially a s
 “Return only the eigenvalue whose index is 0,”  
 i.e., the **smallest (ground-state) eigenvalue** $E_1$ and its corresponding **eigenvector** $\psi_1$.
 
+You can learn more of the above by clicking [here](https://medium.com/modern-physics/finite-difference-solution-of-the-schrodinger-equation-c49039d161a8)
