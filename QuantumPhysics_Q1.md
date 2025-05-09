@@ -2,14 +2,14 @@
 
 ![image](https://github.com/user-attachments/assets/14c22695-6238-4439-bb11-2089a26517b8)
 
-Infra‑red QWIPs (quantum‑well infrared photodetectors) detect light by photo‑exciting electrons from the bound ground state in a narrow GaAs quantum well into the continuum of the surrounding AlGaAs barrier, after which an applied bias sweeps them out as photocurrent. Your R & D group wants a single‑well QWIP that peaks at $\lambda = 8.0\,\mu\text{m}$ (photon energy $h\nu = 0.155\,\text{eV}$).
+Infra‑red QWIPs (quantum‑well infrared photodetectors) detect light by photo‑exciting electrons from the bound ground state in a narrow GaAs quantum well into the continuum of the surrounding AlGaAs barrier, after which an applied bias sweeps them out as photocurrent. Your R & D group wants a single‑well QWIP that peaks at $\lambda = 8.0\mu\text{m}$ (photon energy $h\nu = 0.155\text{eV}$).
 
 ## Material Parameters
 
 | Material             | Conduction‑band effective mass $m^*$ | Band gap $E_g$ (300 K) | Conduction‑band offset $\Delta E_c$ |
 |----------------------|---------------------------------------|------------------------|--------------------------------------|
-| GaAs (well)          | $0.066 m_0$                          | $1.424\,\text{eV}$     | —                                    |
-| Al₀.₃Ga₀.₇As (barrier) | $0.092 m_0$ *(you may assume GaAs mass for a single-mass model)* | $1.925\,\text{eV}$ | $\Delta E_c \simeq 0.30\,\text{eV}$ |
+| GaAs (well)          | $0.066 m_0$                          | $1.424\text{eV}$     | —                                    |
+| Al₀.₃Ga₀.₇As (barrier) | $0.092 m_0$ *(you may assume GaAs mass for a single-mass model)* | $1.925\text{eV}$ | $\Delta E_c \simeq 0.30\text{eV}$ |
 
 Treat the conduction band as a **finite square well**:
 
