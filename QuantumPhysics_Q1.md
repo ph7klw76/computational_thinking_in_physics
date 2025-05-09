@@ -1,5 +1,7 @@
 # Designing a GaAs/Al₀.₃Ga₀.₇As Quantum‑Well Infra‑Red Photodetector for 8 µm
 
+![image](https://github.com/user-attachments/assets/14c22695-6238-4439-bb11-2089a26517b8)
+
 Infra‑red QWIPs (quantum‑well infrared photodetectors) detect light by photo‑exciting electrons from the bound ground state in a narrow GaAs quantum well into the continuum of the surrounding AlGaAs barrier, after which an applied bias sweeps them out as photocurrent. Your R & D group wants a single‑well QWIP that peaks at $\lambda = 8.0\,\mu\text{m}$ (photon energy $h\nu = 0.155\,\text{eV}$).
 
 ## Material Parameters
@@ -221,7 +223,7 @@ This forms a tridiagonal matrix structure:
 
 Then, SciPy applies an **efficient tridiagonal eigensolver**  essentially a specialized version of either the **symmetric QR algorithm** or the **divide-and-conquer algorithm**  to compute the eigenvalues and eigenvectors efficiently.
 
-### Selecting Eigenvalues in SciPy
+Selecting Eigenvalues in SciPy
 
 - `select='i'`  
   Tells SciPy to select eigenvalues **by index** rather than computing all of them or selecting by value.
@@ -234,3 +236,8 @@ Then, SciPy applies an **efficient tridiagonal eigensolver**  essentially a spec
 i.e., the **smallest (ground-state) eigenvalue** $E_1$ and its corresponding **eigenvector** $\psi_1$.
 
 You can learn more of the above by clicking [here](https://medium.com/modern-physics/finite-difference-solution-of-the-schrodinger-equation-c49039d161a8)
+
+What you should expect
+
+![image](https://github.com/user-attachments/assets/d75496b6-8db7-4e53-9f48-98887795148a)
+
