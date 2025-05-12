@@ -1,1 +1,1 @@
-# computational_thinking_in_physics
+# Computational Thinking in Physics
