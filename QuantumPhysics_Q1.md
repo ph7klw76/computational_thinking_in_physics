@@ -35,6 +35,9 @@ Assume the material is **n-type**, so only electrons (conduction band) matter.
 
 ![image](https://github.com/user-attachments/assets/92a3510d-de13-458e-bb16-e4e546254776)
 
+
+![image](https://github.com/user-attachments/assets/48778b76-2907-4754-977d-780d193fd901)
+
 ---
 
 ### 3. Visualise
