@@ -14,10 +14,10 @@ Infra‑red QWIPs (quantum‑well infrared photodetectors) detect light by photo
 Treat the conduction band as a **finite square well**:
 
 $$
-V(x) = 
+V(z) = 
 \begin{cases}
-0 & \text{if } |x| < \frac{L}{2} \\\\
-\Delta E_c & \text{if } |x| \geq \frac{L}{2}
+0 & \text{if } |z| < \frac{L}{2} \\\\
+\Delta E_c & \text{if } |z| \geq \frac{L}{2}
 \end{cases}
 $$
 
@@ -32,8 +32,6 @@ Assume the material is **n-type**, so only electrons (conduction band) matter.
 - Returns the ground-state energy $E_1(L)$ measured from the bottom of the well.
 
 ### 2. Iterate over $L$ to find the smallest width $L^* < 10\,\text{nm}$ for which an 8 µm photon can just promote an electron into the continuum, i.e.
-
-![image](https://github.com/user-attachments/assets/92a3510d-de13-458e-bb16-e4e546254776)
 
 
 ![image](https://github.com/user-attachments/assets/b0445cf3-3696-44a5-b3ce-d8600eb8208e)
