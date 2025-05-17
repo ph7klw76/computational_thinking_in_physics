@@ -11,6 +11,9 @@ Infra‑red QWIPs (quantum‑well infrared photodetectors) detect light by photo
 | GaAs (well)          | $0.066 m_0$                          | $1.424\text{eV}$     | —                                    |
 | Al₀.₃Ga₀.₇As (barrier) | $0.092 m_0$ *(you may assume GaAs mass for a single-mass model)* | $1.925\text{eV}$ | $\Delta E_c \simeq 0.30\text{eV}$ |
 
+![image](https://github.com/user-attachments/assets/336e80bf-6af5-4cdd-bfb6-05cf7a0d817d)
+
+
 Treat the conduction band as a **finite square well**:
 
 $$
