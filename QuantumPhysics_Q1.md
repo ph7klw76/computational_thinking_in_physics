@@ -36,7 +36,8 @@ Assume the material is **n-type**, so only electrons (conduction band) matter.
 ![image](https://github.com/user-attachments/assets/92a3510d-de13-458e-bb16-e4e546254776)
 
 
-![image](https://github.com/user-attachments/assets/48778b76-2907-4754-977d-780d193fd901)
+![image](https://github.com/user-attachments/assets/b0445cf3-3696-44a5-b3ce-d8600eb8208e)
+
 
 ---
 
@@ -83,13 +84,14 @@ $$
 Define grid points:
 
 $$
-z_i = z_0 + i \Delta x, \quad i = 0, \dots, N - 1
+z_i = z_0 + i \Delta z, \quad i = 0, \dots, N - 1
 $$
 
 Second derivative using central differences:
 To learn more calculation of derivatives using central differences method click [here](https://en.wikipedia.org/wiki/Finite_difference)
 
-![image](https://github.com/user-attachments/assets/5052930b-4598-4797-94ed-9dfb927c3a8d)
+![image](https://github.com/user-attachments/assets/37d1f5b1-87ad-4d74-b45f-c44db51f679c)
+
 
 
 ---
@@ -99,8 +101,8 @@ To learn more calculation of derivatives using central differences method click 
 The Hamiltonian matrix $H$ is tridiagonal with elements:
 
 $$
-H_{ii} = \frac{\hbar^2}{m^* (\Delta x)^2} + V(z_i), \quad
-H_{i, i \pm 1} = -\frac{\hbar^2}{2 m^* (\Delta x)^2}
+H_{ii} = \frac{\hbar^2}{m^* (\Delta z)^2} + V(z_i), \quad
+H_{i, i \pm 1} = -\frac{\hbar^2}{2 m^* (\Delta z)^2}
 $$
 
 ---
@@ -117,7 +119,7 @@ and extract the **lowest eigenvalue** $E_1$ as the ground-state energy.
 
 ## Finite-Difference Hamiltonian Matrix
 
-For a grid of $N$ points $z_1, \dots, z_N$ with spacing $\Delta x$, the finite-difference Hamiltonian in the effective-mass approximation is the $N \times N$ tridiagonal matrix:
+For a grid of $N$ points $z_1, \dots, z_N$ with spacing $\Delta z$, the finite-difference Hamiltonian in the effective-mass approximation is the $N \times N$ tridiagonal matrix:
 
 $$
 H =
@@ -137,13 +139,13 @@ For each grid point $z_i$, define:
 - Main diagonal:
   
 $$
-d_i = H_{ii} = \frac{\hbar^2}{m^* (\Delta x)^2} + V(z_i)
+d_i = H_{ii} = \frac{\hbar^2}{m^* (\Delta z)^2} + V(z_i)
 $$
 
 - Off-diagonals:
   
 $$
-t = -H_{i, i \pm 1} = \frac{\hbar^2}{2 m^* (\Delta x)^2}
+t = -H_{i, i \pm 1} = \frac{\hbar^2}{2 m^* (\Delta z)^2}
 $$
 
 So the matrix entries are:
@@ -151,7 +153,7 @@ So the matrix entries are:
 - **Main diagonal** ($i = 1, \dots, N$):
 
 $$
-H_{ii} = \frac{\hbar^2}{m^* (\Delta x)^2} + V(z_i)
+H_{ii} = \frac{\hbar^2}{m^* (\Delta z)^2} + V(z_i)
 $$
 
   where
@@ -167,7 +169,7 @@ $$
 - **Off-diagonal elements** ($i = 1, \dots, N - 1$):
 
 $$
-H_{i,i+1} = H_{i+1,i} = -\frac{\hbar^2}{2 m^* (\Delta x)^2}
+H_{i,i+1} = H_{i+1,i} = -\frac{\hbar^2}{2 m^* (\Delta z)^2}
 $$
 
 All other entries of $H$ are zero.
