@@ -11,17 +11,17 @@ J_to_eV = 1 / e
 Delta_Ec_nominal = 0.30  # eV
 hv = 0.155               # eV
 
-def ground_state_energy(L_nm, Delta_Ec=Delta_Ec_nominal, dx_nm=0.05):
+def ground_state_energy(L_nm, Delta_Ec=Delta_Ec_nominal, dz_nm=0.05):
     """
     Ground state energy (eV) for a finite square well of width L_nm (nm).
     """
     pad_nm = 10.0
-    z_nm = np.arange(-pad_nm - L_nm/2, pad_nm + L_nm/2 + dx_nm, dx_nm) # length of quantum well
+    z_nm = np.arange(-pad_nm - L_nm/2, pad_nm + L_nm/2 + dz_nm, dz_nm) # length of quantum well
     N = len(z_nm)
     V = np.where(np.abs(z_nm) <= L_nm/2, 0.0, Delta_Ec)  # eV
     
-    dx = dx_nm * 1e-9  # meters
-    prefactor = (hbar**2) / (2 * m_star * dx**2) * J_to_eV  # eV
+    dz = dz_nm * 1e-9  # meters
+    prefactor = (hbar**2) / (2 * m_star * dz**2) * J_to_eV  # eV
     
     main_diag = 2 * prefactor + V
     off_diag = -prefactor * np.ones(N-1)
