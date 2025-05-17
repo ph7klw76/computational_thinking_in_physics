@@ -15,6 +15,8 @@ Infra‑red QWIPs (quantum‑well infrared photodetectors) detect light by photo
 
 Mid- and long-wave IR you almost always rely on conduction-band (or, in p-type structures, valence-band) **intersubband transitions**.
 
+![image](https://github.com/user-attachments/assets/60bcc1fb-894d-4554-ad79-120af97c56c8)
+
 Treat the conduction band as a **finite square well**:
 
 $$
