@@ -6,5 +6,6 @@ a) Quantum Well
 
 [Problem](QuantumPhysics_Q1.md)
 [Solution](designingQW.py)
+[Slide](DesigningaQuantum‑WellInfra‑Red.pdf)
 
 ## Waves and Vibration
