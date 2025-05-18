@@ -89,7 +89,7 @@ example of tuned-mass damper under a bridge
 
 
 To understand more about tuned-mass damper click [here](https://www.youtube.com/watch?v=vLaFAKnaRJU)
-# Compact Matrix Form
+## Compact Matrix Form
 
 We collectthe last 2 equations  into a matrix equation. Let
 
@@ -103,7 +103,7 @@ Then,
 
 This succinct form highlights the coupling between the two masses via off-diagonal terms in $C$ and $K$.
 
-# Harmonic Response and Transfer Function
+## Harmonic Response and Transfer Function
 
 Assume sinusoidal excitation $F(t) = F_0 e^{i\omega t}$ and seek steady-state $y(t) = Y e^{i\omega t}$. Substitution into (4) yields:
 
@@ -116,7 +116,7 @@ The frequency-response function from force to primary displacement is:
 
 Where $(\cdot)_{1,1}$ denotes the top-left entry of the inverse matrix. Plotting $|H(\omega)|$ reveals how the TMD splits and lowers the resonance peak.
 
-# Optimum Tuning: Den Hartog’s Equal-Peak Method
+## Optimum Tuning: Den Hartog’s Equal-Peak Method
 
 Define the primary natural frequency
 
@@ -151,4 +151,90 @@ r_{\text{opt}} = \frac{1}{1 + \mu}, \quad
 $$
 
 With these, the two resonance peaks in $|H(\omega)|$ are equal and as small as possible.
+
+# Problem Statement
+
+You are asked to evaluate the effectiveness of a tuned-mass damper (TMD) for the first vertical mode of a lightweight pedestrian bridge.  
+Use the following data and complete the three analysis tasks described.
+
+---
+
+## Bridge (Primary System)
+
+| Symbol | Meaning                    | Value            |
+|--------|----------------------------|------------------|
+| $M$    | first-mode (deck) modal mass | $2.0 \times 10^4$ kg |
+| $f_n$  | undamped natural frequency | 2.0 Hz           |
+| $\zeta_M$ | structural damping ratio    | 2%               |
+
+Compute:
+
+$$
+\omega_0 = 2\pi f_n, \quad
+k = \omega_0^2 M, \quad
+c = 2\zeta_M \sqrt{kM}
+$$
+
+---
+
+## Tuned-Mass Damper (Secondary System)
+
+| Symbol | Meaning                 | Value / Rule |
+|--------|-------------------------|--------------|
+| $m$    | TMD mass                | $m = rM$, with the mass ratio $r$ varied from 0% to 10% in 1% steps |
+| $k_t$  | TMD spring stiffness    | $k_t = \omega_0^2 m$ (i.e. the TMD is tuned exactly to the bridge frequency) |
+| $\zeta_t$ | TMD damping ratio       | 10%          |
+| $c_t$  |                          | $c_t = 2 \zeta_t m \omega_0$ |
+
+---
+
+## External Excitation
+
+The bridge deck is subjected to a stationary crowd-induced harmonic load:
+
+$$
+F(t) = F_0 \cos(\Omega_0 t), \quad F_0 = 3.0 \times 10^4\ \text{N}, \quad \Omega_0 = \omega_0
+$$
+
+---
+
+## Tasks to Perform
+
+### 1. Mode-Splitting Study
+
+For each mass ratio $r = 0,\ 0.01,\ \dots,\ 0.10$:
+
+- Form the $2 \times 2$ mass and stiffness matrices of the coupled bridge–TMD system.
+- Calculate the two undamped natural frequencies $f_1,\ f_2$.
+- Print a table showing $r$, the higher of $\{f_1, f_2\}$ and the lower of $\{f_1, f_2\}$.
+
+---
+
+### 2. Frequency-Response Peak
+
+Keeping $r = 5\%$ (the design choice), evaluate the complex frequency-response function:
+
+![image](https://github.com/user-attachments/assets/d7149236-917d-4383-9c2d-0d9f52d8a145)
+
+- Evaluate on a uniform grid $f = 0.5$ Hz to $3.5$ Hz in $0.005$ Hz steps.
+- Report the forcing frequency at which $|H|$ attains its maximum and the corresponding magnitude.
+
+---
+
+### 3. Time-Domain Verification
+
+With $r = 5\%$ and the same external load:
+
+- Integrate the coupled ODEs for $0 \le t \le 60$ s using zero initial conditions.
+- Return the root-mean-square (RMS) deck acceleration $\left\langle \ddot{y}_1^2 \right\rangle$ evaluated over the last 20 s of the record ($40 \le t \le 60$ s).
+
+---
+
+## Expected Numerical Outputs
+
+A correctly implemented solution should print, in order:
+
+1. A ten-row table of the split natural frequencies versus mass ratio.  
+2. The frequency and magnitude of the peak deck displacement FRF.  
+3. The RMS deck acceleration in $\text{m/s}^2$ for the final 20 s of the simulation.
 
