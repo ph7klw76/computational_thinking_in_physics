@@ -10,3 +10,7 @@ a) Quantum Well
 [UTube]()
 
 ## Waves and Vibration
+
+a) Tuned-Mass Damper
+
+[Problem](OptimisingaTuned-Mass-Damper.md)
