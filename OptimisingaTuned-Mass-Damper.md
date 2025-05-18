@@ -5,7 +5,19 @@ When several people walk in step, the horizontal forcing is nearly sinusoidal at
 A a smaller “parasitic” mass connected to the deck by a spring and dashpot that absorbs energy near resonance and returns it as heat. Choosing its parameters (mass ratio, stiffness, damping) is a textbook application of forced, damped, coupled oscillations and normal-mode theory.
 
 Light steel footbridges often have a first lateral natural frequency close to the cadence of walking crowds ($\approx 1.6\,\text{–}\,2.2\ \text{Hz}$). Synchronised pedestrians can excite a sinusoidal horizontal force that makes the deck vibrate uncomfortably. A Tuned-Mass Damper (TMD), a small secondary mass connected by a spring-dashpot, re-distributes the vibratory energy and keeps accelerations within the ISO 10137 lateral comfort limit of:
-$0.2\ \text{m}\ \text{s}^{-2}$
+$0.2\ \text{m}\ \text{s}^{-2}$ (RMS)
+
+RMS here stands for root-mean-square, a statistical measure of the magnitude of a varying quantity. In our vibration context, we use it to quantify the “average” acceleration level of the deck over a period of time, regardless of sign (upward or downward).
+
+Concretely, if $a(t)$ is the instantaneous vertical acceleration of the deck, then over a time window $[t_1,\, t_2]$ the RMS acceleration is defined as:
+
+$$
+a_{\text{RMS}} = \sqrt{ \frac{1}{t_2 - t_1} \int_{t_1}^{t_2} [a(t)]^2 \, dt }
+$$
+
+Unlike a simple arithmetic mean, RMS accounts for both positive and negative swings by squaring, so it measures the energy content of the vibration.
+
+It gives a single scalar “equivalent” acceleration level that you can compare directly against comfort or serviceability thresholds.
 
 # Vibration Model of the Bridge
 
