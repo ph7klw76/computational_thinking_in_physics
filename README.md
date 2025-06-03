@@ -1,5 +1,6 @@
 # Computational Thinking in Physics
 
+[How to learn Physics](howtolearnphysics.md)
 
 ## Quantum Physics
 a) Quantum Well
