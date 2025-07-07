@@ -15,3 +15,8 @@ a) Quantum Well
 a) Tuned-Mass Damper
 
 [Problem](OptimisingaTuned-Mass-Damper.md)
+
+
+## Mechanics
+
+[Drone-based delivery system](https://github.com/ph7klw76/SQA7018/blob/main/Problem1.md)
